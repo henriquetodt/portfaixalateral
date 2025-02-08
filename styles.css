@@ -1,67 +1,179 @@
+/* Definição de cores */
 :root {
-    --primary-color: #007BFF;
-    --bg-color: #F8F9FA;
+    --primary-color: #1c3f60;
+    --highlight-color: #f39c12;
     --text-color: #333;
-    --hover-scale: 1.1;
+    --hover-scale: 1.01;
+}
+
+
+/* Removendo estilos padrão de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    color: inherit;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Barlow', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background: #f5f5f5;
 }
 
+/* Layout principal */
 .container {
     display: flex;
+    width: 100%;
     min-height: 100vh;
 }
 
-.faixa {
+/* Faixa Azul */
+.blue-strip {
     width: 30px;
-    background-color: var(--primary-color);
-    position: fixed;
-    height: 100vh;
+    background: var(--primary-color);
 }
 
-.content {
-    flex: 2;
-    padding: 20px;
-}
-
-.text-block {
-    background: white;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.cases {
+/* Coluna de informações */
+.info {
     flex: 1;
+    padding: 30px;
+    background: white;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    justify-content: top;
+}
+
+h1 {
+    margin-bottom: 0px;
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+h2 {
+    margin-top: 2px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+/* Lista de habilidades */
+.skills {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.skills li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.skills i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+/* Texto de introdução ao portfólio */
+.explore-text {
+    font-size: 16px;
+    margin-top: 20px;
+}
+.explore-text i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.portfolio-highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+/* Ícones de contato */
+.contact-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-icons a {
+    color: var(--primary-color);
+    font-size: 20px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    transform: scale(1.2);
+    color: var(--highlight-color);
+}
+
+/* Cases */
+.cases {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
 }
 
 .case-item {
     margin-bottom: 20px;
-    text-align: center;
 }
 
-.case-item img {
-    width: 100%;
-    max-width: 150px;
+.case-link {
+    display: block;
+}
+
+.case-box {
+    background: white;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.case-item a {
-    text-decoration: none;
-    color: var(--text-color);
+/* Imagem no topo do box */
+.case-img {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
 }
 
-.case-item:hover img {
+/* Conteúdo do Case */
+.case-content {
+    padding: 20px;
+}
+
+.case-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.case-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Tags */
+.case-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.case-tags span {
+    background: var(--primary-color);
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+/* Hover nos cases */
+.case-box:hover {
     transform: scale(var(--hover-scale));
 }

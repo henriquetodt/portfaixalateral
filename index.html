@@ -1,42 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Análise de Dados</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+
     <div class="container">
-        <div class="faixa"></div>
-        
-        <div class="content">
-            <div class="text-block" data-aos="fade-up">
-                <h2>Case 1: Otimização de Processos</h2>
-                <p>Redução de custos operacionais através da análise de dados.</p>
-            </div>
-            <div class="text-block" data-aos="fade-up">
-                <h2>Case 2: Previsão de Demanda</h2>
-                <p>Modelagem estatística para melhorar a projeção de vendas.</p>
+        <!-- Faixa Azul -->
+        <div class="blue-strip"></div>
+
+        <!-- Coluna de Informações -->
+        <div class="info">
+            <h1>LUIZ HENRIQUE TODT</h1>
+            <h2>Analista de Dados e BI</h2>
+
+            <ul class="skills">
+                <li><i class="fa-solid fa-check"></i> Power BI</li>
+                <li><i class="fa-solid fa-check"></i> SQL</li>
+                <li><i class="fa-solid fa-check"></i> Python</li>
+                <li><i class="fa-solid fa-check"></i> Machine Learning</li>
+                <li><i class="fa-solid fa-check"></i> ETL</li>
+            </ul>
+
+            <p class="explore-text"><i class="fa-solid fa-arrow-trend-up"></i>
+                Explore ao lado os trabalhos mais destacados do meu 
+                <span class="portfolio-highlight">PORTFÓLIO</span>.
+            </p>
+
+            <!-- Ícones de Contato -->
+            <div class="contact-icons">
+                <a href="https://linkedin.com/in/seu-perfil" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:seuemail@email.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/seunumerodetelefone" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
 
+        <!-- Coluna de Cases -->
         <div class="cases">
             <div class="case-item" data-aos="fade-up">
-                <a href="case1.html">
-                    <img src="case1.jpg" alt="Case 1">
-                    <p>Leia mais</p>
+                <a href="case1.html" class="case-link">
+                    <div class="case-box">
+                        <div class="case-img" style="background-image: url('img/dash1.jpg');"></div>
+                        <div class="case-content">
+                            <h3>Otimização de Processos</h3>
+                            <p>Redução de custos operacionais através da análise de dados.</p>
+                            <div class="case-tags">
+                                <span>Power BI</span>
+                                <span>SQL</span>
+                                <span>ETL</span>
+                            </div>
+                        </div>
+                    </div>
                 </a>
             </div>
+
             <div class="case-item" data-aos="fade-up">
-                <a href="case2.html">
-                    <img src="case2.jpg" alt="Case 2">
-                    <p>Leia mais</p>
+                <a href="case2.html" class="case-link">
+                    <div class="case-box">
+                        <div class="case-img" style="background-image: url('img/dash2.jpg');"></div>
+                        <div class="case-content">
+                            <h3>Previsão de Demanda</h3>
+                            <p>Modelagem estatística para melhorar projeção de vendas.</p>
+                            <div class="case-tags">
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>Forecast</span>
+                            </div>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
